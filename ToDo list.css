@@ -1,0 +1,219 @@
+*,
+*::before,
+*::after {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+body {
+  font-family: 'Roboto', sans-serif; 
+  height: 100vh; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  background: url(https://img.freepik.com/free-photo/3d-geometric-shapes-indoors-background_23-2150697206.jpg?t=st=1718605697~exp=1718609297~hmac=b5bc9a2efb9e2c83cb91a3f7d40a5ec817eaabf073c4e0db7e300951e6520d85&w=1060) no-repeat;
+  background-position: center; 
+  background-size: cover; 
+}
+
+.container {
+  width: 400px;
+  height: auto;
+  min-height: 400px;
+  padding: 30px; 
+  background: transparent; 
+  border: 2px solid #ffffff; 
+  border-radius: 10px; 
+  backdrop-filter: blur(10px); 
+}
+
+h1 {
+  color: #eee; 
+  text-align: center; 
+  margin-bottom: 36px;
+}
+
+.input-container {
+  display: flex; 
+  justify-content: space-between; 
+  margin-bottom: 25px; 
+}
+
+.todo-input {
+  flex: 1; 
+  outline: none;
+  padding: 10px 10px 10px 20px; 
+  background-color: transparent; 
+  border: 2px solid #ffffff; 
+  border-radius: 30px;
+  color: #eee;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.todo-input::placeholder {
+  color: #bfbfbf;
+}
+
+.add-button {
+  border: none;
+  outline: none;
+  background: #3d00f0;
+  color: #fff;
+  font-size: 35px;
+  cursor: pointer;
+  border-radius: 40px;
+  width: 40px;
+  height: 40px;
+}
+
+.empty-image {
+  margin: 100px auto 0;
+  display: block;
+}
+
+.todo {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #463c7b;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 10px 12px;
+  border: 2px solid #f2efef;
+  transition: all 0.2s ease;
+}
+
+.todo:first-child {
+  margin-top: 0;
+}
+
+.todo:last-child {
+  margin-bottom: 0;
+}
+
+.todo:hover {
+  background-color: #f00000;
+}
+
+.todo label {
+  cursor: pointer;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  color: #eee;
+}
+
+.todo span {
+  padding-left: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+span::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  margin-left: -30px;
+  border-radius: 100px; 
+  border: 2px solid #ffffff;
+}
+
+input[type='checkbox'] {
+  visibility: hidden; 
+}
+
+input:checked+span {
+  text-decoration: line-through;
+}
+
+.todo:hover input:checked+span::before,
+input:checked+span::before {
+  background: url(./images/check.png) 50% 50% no-repeat #09bb21;
+  border-color: #09bb21;
+}
+
+.todo:hover span::before {
+  border-color: #eee;
+}
+
+.todo .delete-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #eee; 
+  font-size: 24px;
+}
+
+.todos-container {
+  height: 300px; 
+  overflow: overlay; 
+}
+
+.todos-container::-webkit-scrollbar-track {
+  background: rgb(247, 247, 247);
+  border-radius: 20px;
+}
+
+.todos-container::-webkit-scrollbar {
+  width: 0; 
+}
+
+.todos-container:hover::-webkit-scrollbar {
+  width: 7px;
+}
+
+.todos-container::-webkit-scrollbar-thumb {
+  background: #d5d5d5;
+  border-radius: 20px;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.filter {
+  color: #eee;
+  padding: 5px 15px;
+  border-radius: 100px;
+  border: 2px solid #48ff00;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.filter.active,
+.filter:hover {
+  background-color: #43e123; 
+}
+
+.delete-all {
+  display: flex; 
+  color: #eee;
+  padding: 7px 15px;
+  cursor:alias;
+  transition: all 0.5s ease;
+}
+.delete-all:hover {
+  border-radius: 50%;
+  background-color: #f00000;
+}
+.timer-container {
+  position: fixed; 
+  top: 0;
+  left: 0; 
+  padding: 10px; 
+  background-color: transparent; 
+  width: 100px; 
+  text-align: center; 
+}
+#current-time {
+  font-size: 25px; 
+  font-weight: bold; 
+  color: #eee;
+}

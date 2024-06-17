@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO LIST</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+  <link rel="stylesheet" href="./ToDo list.css">
+</head>
+<body>
+  <div class="container">
+    <h1>To-Do List</h1>
+    <div class="input-container">
+      <input class="todo-input" placeholder="Add a new task...">
+      <button class="add-button">
+        <i class="fa fa-plus-circle"></i>
+      </button>
+    </div>
+    <div class="filters">
+      <div class="filter" data-filter="completed">Complete</div>
+      <div class="filter" data-filter="pending">Incomplete</div>
+      <div class="filter" data-filter="deleting">Complete</div>
+    </div>
+    <div class="todos-container">
+      <ul class="todos"></ul>
+      <img class="empty-image" src="https://i.pinimg.com/736x/ba/27/4e/ba274e2c2071bd3c3a011c5920b0efb7.jpg" width="280" height="300">
+    </div>
+  </div>
+  <div class="timer-container">
+    <span id="current-time"></span>
+  </div>
+  <script src="./Main.js"></script>
+</body>
+</html>
